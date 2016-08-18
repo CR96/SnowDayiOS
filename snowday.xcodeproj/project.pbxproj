@@ -15,6 +15,9 @@
 		0499C1001D660E34002F9914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0FE1D660E34002F9914 /* LaunchScreen.storyboard */; };
 		0499C10B1D660E34002F9914 /* snowdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C10A1D660E34002F9914 /* snowdayTests.swift */; };
 		0499C1161D660E34002F9914 /* snowdayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C1151D660E34002F9914 /* snowdayUITests.swift */; };
+		D8F3722CEA64522D7404A656 /* Pods_snowday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */; };
+		E2275EDA2EA7772722F11FC4 /* Pods_snowdayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */; };
+		EEBBA1780ED312DE53BED789 /* Pods_snowdayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		0499C1111D660E34002F9914 /* snowdayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snowdayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499C1151D660E34002F9914 /* snowdayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snowdayUITests.swift; sourceTree = "<group>"; };
 		0499C1171D660E34002F9914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.debug.xcconfig"; sourceTree = "<group>"; };
+		1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.release.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.release.xcconfig"; sourceTree = "<group>"; };
+		3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowdayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0522B831B864B9DBDAF8C6 /* Pods-snowdayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowdayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-snowdayUITests/Pods-snowdayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E89388C3C479C951B026530 /* Pods-snowdayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowdayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snowdayTests/Pods-snowdayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowdayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DA4C6984180CAAA064CD4B /* Pods-snowdayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowdayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-snowdayTests/Pods-snowdayTests.release.xcconfig"; sourceTree = "<group>"; };
+		E78E04BC5BA2064B84A09A48 /* Pods-snowdayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowdayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snowdayUITests/Pods-snowdayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F3722CEA64522D7404A656 /* Pods_snowday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2275EDA2EA7772722F11FC4 /* Pods_snowdayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBBA1780ED312DE53BED789 /* Pods_snowdayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				0499C1091D660E34002F9914 /* snowdayTests */,
 				0499C1141D660E34002F9914 /* snowdayUITests */,
 				0499C0F11D660E34002F9914 /* Products */,
+				073A8B1B41F91597DEC2A667 /* Pods */,
+				3FED18773BC3A8AA14F61024 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,29 @@
 			path = snowdayUITests;
 			sourceTree = "<group>";
 		};
+		073A8B1B41F91597DEC2A667 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */,
+				1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */,
+				7E89388C3C479C951B026530 /* Pods-snowdayTests.debug.xcconfig */,
+				D5DA4C6984180CAAA064CD4B /* Pods-snowdayTests.release.xcconfig */,
+				E78E04BC5BA2064B84A09A48 /* Pods-snowdayUITests.debug.xcconfig */,
+				3F0522B831B864B9DBDAF8C6 /* Pods-snowdayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3FED18773BC3A8AA14F61024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */,
+				C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */,
+				3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0499C11A1D660E34002F9914 /* Build configuration list for PBXNativeTarget "snowday" */;
 			buildPhases = (
+				FCAFCE44383B7455456DFDBE /* 📦 Check Pods Manifest.lock */,
 				0499C0EC1D660E33002F9914 /* Sources */,
 				0499C0ED1D660E33002F9914 /* Frameworks */,
 				0499C0EE1D660E33002F9914 /* Resources */,
+				867279843AD896162BFC0B0E /* 📦 Embed Pods Frameworks */,
+				48E9F1E480C41C47E285EA23 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0499C11D1D660E34002F9914 /* Build configuration list for PBXNativeTarget "snowdayTests" */;
 			buildPhases = (
+				AD01B00D28FE01BA6052B199 /* 📦 Check Pods Manifest.lock */,
 				0499C1021D660E34002F9914 /* Sources */,
 				0499C1031D660E34002F9914 /* Frameworks */,
 				0499C1041D660E34002F9914 /* Resources */,
+				BD77CC19CF132C7AF79B7B3C /* 📦 Embed Pods Frameworks */,
+				F5E3461F6A80193E25767CE6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0499C1201D660E34002F9914 /* Build configuration list for PBXNativeTarget "snowdayUITests" */;
 			buildPhases = (
+				05F5E3ACDCB6A033AE8262AA /* 📦 Check Pods Manifest.lock */,
 				0499C10D1D660E34002F9914 /* Sources */,
 				0499C10E1D660E34002F9914 /* Frameworks */,
 				0499C10F1D660E34002F9914 /* Resources */,
+				34AA142274C9C5F84398636E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +302,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F5E3ACDCB6A033AE8262AA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		34AA142274C9C5F84398636E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snowdayUITests/Pods-snowdayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48E9F1E480C41C47E285EA23 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snowday/Pods-snowday-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867279843AD896162BFC0B0E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snowday/Pods-snowday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD01B00D28FE01BA6052B199 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD77CC19CF132C7AF79B7B3C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snowdayTests/Pods-snowdayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E3461F6A80193E25767CE6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-snowdayTests/Pods-snowdayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCAFCE44383B7455456DFDBE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0499C0EC1D660E33002F9914 /* Sources */ = {
@@ -404,6 +575,7 @@
 		};
 		0499C11B1D660E34002F9914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -416,6 +588,7 @@
 		};
 		0499C11C1D660E34002F9914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -428,6 +601,7 @@
 		};
 		0499C11E1D660E34002F9914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E89388C3C479C951B026530 /* Pods-snowdayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = snowdayTests/Info.plist;
@@ -440,6 +614,7 @@
 		};
 		0499C11F1D660E34002F9914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5DA4C6984180CAAA064CD4B /* Pods-snowdayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = snowdayTests/Info.plist;
@@ -452,6 +627,7 @@
 		};
 		0499C1211D660E34002F9914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78E04BC5BA2064B84A09A48 /* Pods-snowdayUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = snowdayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -463,6 +639,7 @@
 		};
 		0499C1221D660E34002F9914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0522B831B864B9DBDAF8C6 /* Pods-snowdayUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = snowdayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

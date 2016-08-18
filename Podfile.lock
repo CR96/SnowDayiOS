@@ -1,0 +1,27 @@
+PODS:
+  - Crashlytics (3.7.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.8)
+  - SWXMLHash (2.5.0)
+  - TwitterCore (2.3.0):
+    - Fabric
+  - TwitterKit (2.3.0):
+    - TwitterCore (= 2.3.0)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - SWXMLHash
+  - TwitterCore
+  - TwitterKit
+
+SPEC CHECKSUMS:
+  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  SWXMLHash: 04158642e0c90c52274db7914032edd41bed9a41
+  TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
+  TwitterKit: 8a383da8d9c21b0423716381ea8bbfce20622d91
+
+PODFILE CHECKSUM: f620c8c585e4132f15387d7fd973101c367fbcdc
+
+COCOAPODS: 1.0.0
