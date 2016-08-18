@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        // TODO: Add Fabric API keys to Info.plist and the run script before shipping.
+        Fabric.with([Crashlytics.self, Twitter.self])
         return true
     }
 
