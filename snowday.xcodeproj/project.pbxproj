@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C0F31D660E34002F9914 /* AppDelegate.swift */; };
-		0499C0F61D660E34002F9914 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C0F51D660E34002F9914 /* FirstViewController.swift */; };
-		0499C0F81D660E34002F9914 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C0F71D660E34002F9914 /* SecondViewController.swift */; };
 		0499C0FB1D660E34002F9914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0F91D660E34002F9914 /* Main.storyboard */; };
 		0499C0FD1D660E34002F9914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0FC1D660E34002F9914 /* Assets.xcassets */; };
 		0499C1001D660E34002F9914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0FE1D660E34002F9914 /* LaunchScreen.storyboard */; };
 		0499C10B1D660E34002F9914 /* snowdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C10A1D660E34002F9914 /* snowdayTests.swift */; };
 		0499C1161D660E34002F9914 /* snowdayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C1151D660E34002F9914 /* snowdayUITests.swift */; };
+		04C9DFEA1D669D5100D0C46C /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFE91D669D5100D0C46C /* InputController.swift */; };
+		04C9DFEC1D669D5C00D0C46C /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFEB1D669D5C00D0C46C /* AboutController.swift */; };
+		04C9DFEE1D669D6A00D0C46C /* PercentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFED1D669D6A00D0C46C /* PercentController.swift */; };
+		04C9DFF01D669D7300D0C46C /* ClosingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */; };
+		04C9DFF21D669D7F00D0C46C /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFF11D669D7F00D0C46C /* WeatherController.swift */; };
 		D8F3722CEA64522D7404A656 /* Pods_snowday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */; };
 		E2275EDA2EA7772722F11FC4 /* Pods_snowdayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */; };
 		EEBBA1780ED312DE53BED789 /* Pods_snowdayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */; };
@@ -40,8 +43,6 @@
 /* Begin PBXFileReference section */
 		0499C0F01D660E34002F9914 /* snowday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499C0F31D660E34002F9914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0499C0F51D660E34002F9914 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0499C0F71D660E34002F9914 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0499C0FA1D660E34002F9914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0499C0FC1D660E34002F9914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0499C0FF1D660E34002F9914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,11 @@
 		0499C1111D660E34002F9914 /* snowdayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snowdayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499C1151D660E34002F9914 /* snowdayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snowdayUITests.swift; sourceTree = "<group>"; };
 		0499C1171D660E34002F9914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C9DFE91D669D5100D0C46C /* InputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		04C9DFEB1D669D5C00D0C46C /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
+		04C9DFED1D669D6A00D0C46C /* PercentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentController.swift; sourceTree = "<group>"; };
+		04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosingsController.swift; sourceTree = "<group>"; };
+		04C9DFF11D669D7F00D0C46C /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.debug.xcconfig"; sourceTree = "<group>"; };
 		1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.release.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.release.xcconfig"; sourceTree = "<group>"; };
 		3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowdayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,12 +123,15 @@
 			isa = PBXGroup;
 			children = (
 				0499C0F31D660E34002F9914 /* AppDelegate.swift */,
-				0499C0F51D660E34002F9914 /* FirstViewController.swift */,
-				0499C0F71D660E34002F9914 /* SecondViewController.swift */,
 				0499C0F91D660E34002F9914 /* Main.storyboard */,
 				0499C0FC1D660E34002F9914 /* Assets.xcassets */,
 				0499C0FE1D660E34002F9914 /* LaunchScreen.storyboard */,
 				0499C1011D660E34002F9914 /* Info.plist */,
+				04C9DFE91D669D5100D0C46C /* InputController.swift */,
+				04C9DFEB1D669D5C00D0C46C /* AboutController.swift */,
+				04C9DFED1D669D6A00D0C46C /* PercentController.swift */,
+				04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */,
+				04C9DFF11D669D7F00D0C46C /* WeatherController.swift */,
 			);
 			path = snowday;
 			sourceTree = "<group>";
@@ -431,9 +440,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0499C0F81D660E34002F9914 /* SecondViewController.swift in Sources */,
+				04C9DFEA1D669D5100D0C46C /* InputController.swift in Sources */,
 				0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */,
-				0499C0F61D660E34002F9914 /* FirstViewController.swift in Sources */,
+				04C9DFF21D669D7F00D0C46C /* WeatherController.swift in Sources */,
+				04C9DFEC1D669D5C00D0C46C /* AboutController.swift in Sources */,
+				04C9DFEE1D669D6A00D0C46C /* PercentController.swift in Sources */,
+				04C9DFF01D669D7300D0C46C /* ClosingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
