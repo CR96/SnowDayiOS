@@ -14,4 +14,16 @@
  * limitations under the License.
  */
 
-import Foundation
+import UIKit
+
+class ClosingsController: UITableViewController {
+    
+    let colorBackground = UIColor(red:0.00, green:0.22, blue:0.40, alpha:1.0)
+
+    let colorTint = UIColor(red:0.25, green:0.77, blue:1.00, alpha:1.0)
+    
+    override func viewDidLoad() {
+        tableView.backgroundColor = colorBackground
+    }
+}
+

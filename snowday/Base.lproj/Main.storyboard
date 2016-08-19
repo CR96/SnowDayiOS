@@ -147,7 +147,7 @@
         <!--Closings-->
         <scene sceneID="qlN-JF-Obb">
             <objects>
-                <tableViewController id="E36-zP-hBS" sceneMemberID="viewController">
+                <tableViewController id="E36-zP-hBS" customClass="ClosingsController" customModule="snowday" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1yM-R8-W5k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
         <!--Weather-->
         <scene sceneID="NeF-lG-ear">
             <objects>
-                <tableViewController id="fhR-eZ-NVS" sceneMemberID="viewController">
+                <tableViewController id="fhR-eZ-NVS" customClass="WeatherController" customModule="snowday" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lXw-WK-bOT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
