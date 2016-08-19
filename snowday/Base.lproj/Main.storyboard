@@ -48,7 +48,7 @@
         <!--Snow Day Calculator-->
         <scene sceneID="5LN-6X-HbM">
             <objects>
-                <navigationController title="Snow Day Calculator" id="NPL-Vo-WsY" sceneMemberID="viewController">
+                <navigationController title="Snow Day Calculator" id="NPL-Vo-WsY" customClass="NavigationController" customModule="snowday" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8R-V9-c7O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
