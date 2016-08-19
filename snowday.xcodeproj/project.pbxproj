@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0470E10E1D67AA4F0011B142 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470E10D1D67AA4F0011B142 /* NavigationController.swift */; };
+		0470E1101D67B1C80011B142 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470E10F1D67B1C80011B142 /* TabBarController.swift */; };
 		0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C0F31D660E34002F9914 /* AppDelegate.swift */; };
 		0499C0FB1D660E34002F9914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0F91D660E34002F9914 /* Main.storyboard */; };
 		0499C0FD1D660E34002F9914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0499C0FC1D660E34002F9914 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0470E10D1D67AA4F0011B142 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		0470E10F1D67B1C80011B142 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0499C0F01D660E34002F9914 /* snowday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499C0F31D660E34002F9914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0499C0FA1D660E34002F9914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */,
 				04C9DFF11D669D7F00D0C46C /* WeatherController.swift */,
 				0470E10D1D67AA4F0011B142 /* NavigationController.swift */,
+				0470E10F1D67B1C80011B142 /* TabBarController.swift */,
 			);
 			path = snowday;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C9DFEA1D669D5100D0C46C /* InputController.swift in Sources */,
+				0470E1101D67B1C80011B142 /* TabBarController.swift in Sources */,
 				0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */,
 				04C9DFF21D669D7F00D0C46C /* WeatherController.swift in Sources */,
 				04C9DFEC1D669D5C00D0C46C /* AboutController.swift in Sources */,
