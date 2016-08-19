@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2JX-Yz-O43">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NPL-Vo-WsY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -43,7 +43,106 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="750" y="-667"/>
+        </scene>
+        <!--Snow Day Calculator-->
+        <scene sceneID="5LN-6X-HbM">
+            <objects>
+                <navigationController title="Snow Day Calculator" id="NPL-Vo-WsY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i8R-V9-c7O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2JX-Yz-O43" kind="relationship" relationship="rootViewController" id="9La-dm-3Ah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuQ-0R-Z4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-656" y="-667"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="ANe-St-wff">
+            <objects>
+                <viewController title="About" id="9Po-bC-tNK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yqo-il-ha2"/>
+                        <viewControllerLayoutGuide type="bottom" id="jxX-Dk-BlJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="arI-7Z-fAp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ngD-WF-wXJ">
+                                <rect key="frame" x="203" y="550" width="194" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTF-CK-ggT">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="Twitter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I24-hY-de9">
+                                        <rect key="frame" x="64" y="0.0" width="37" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4I2-Tq-BDZ">
+                                        <rect key="frame" x="117" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="Web"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3s-kp-vVd">
+                                        <rect key="frame" x="164" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Git"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66p-8Q-7M1">
+                                <rect key="frame" x="180" y="280" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Hol-Mb-6os"/>
+                                    <constraint firstAttribute="height" constant="128" id="Qsl-hW-6vN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grand Blanc Community Schools" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l76-yq-csx">
+                                <rect key="frame" x="174" y="72" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snow Day Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LK0-PX-dfl">
+                                <rect key="frame" x="174" y="101" width="252" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Corey Rowe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-f2-ij3">
+                                <rect key="frame" x="200" y="144" width="201" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="8B3-jd-Czw"/>
+                                    <constraint firstAttribute="height" constant="21" id="hoC-dO-Kvm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l76-yq-csx" firstAttribute="trailing" secondItem="LK0-PX-dfl" secondAttribute="trailing" id="F6R-gn-sLb"/>
+                            <constraint firstItem="l76-yq-csx" firstAttribute="centerX" secondItem="arI-7Z-fAp" secondAttribute="centerX" id="I6T-iK-Rak"/>
+                            <constraint firstItem="66p-8Q-7M1" firstAttribute="top" secondItem="arI-7Z-fAp" secondAttribute="top" constant="280" id="Mfe-VA-pN8"/>
+                            <constraint firstItem="LK0-PX-dfl" firstAttribute="top" secondItem="l76-yq-csx" secondAttribute="bottom" constant="8" symbolic="YES" id="Reb-NQ-DyV"/>
+                            <constraint firstItem="h0D-f2-ij3" firstAttribute="centerX" secondItem="66p-8Q-7M1" secondAttribute="centerX" id="YJ2-kG-Kfk"/>
+                            <constraint firstItem="l76-yq-csx" firstAttribute="leading" secondItem="LK0-PX-dfl" secondAttribute="leading" id="d4c-v3-xDA"/>
+                            <constraint firstItem="LK0-PX-dfl" firstAttribute="centerX" secondItem="h0D-f2-ij3" secondAttribute="centerX" id="gSs-J2-0hY"/>
+                            <constraint firstItem="l76-yq-csx" firstAttribute="top" secondItem="Yqo-il-ha2" secondAttribute="bottom" constant="8" symbolic="YES" id="kHQ-2q-tSM"/>
+                            <constraint firstItem="66p-8Q-7M1" firstAttribute="centerX" secondItem="ngD-WF-wXJ" secondAttribute="centerX" id="ksn-5j-Dly"/>
+                            <constraint firstItem="h0D-f2-ij3" firstAttribute="top" secondItem="LK0-PX-dfl" secondAttribute="bottom" constant="13" id="vSd-49-y1N"/>
+                            <constraint firstAttribute="bottom" secondItem="ngD-WF-wXJ" secondAttribute="bottom" constant="20" symbolic="YES" id="zV7-zS-sVz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lQ-0O-NeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-656" y="667"/>
         </scene>
         <!--Closings-->
         <scene sceneID="qlN-JF-Obb">
@@ -62,7 +161,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQI-Sp-Khi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="352"/>
+            <point key="canvasLocation" x="750" y="0.0"/>
         </scene>
         <!--Weather-->
         <scene sceneID="NeF-lG-ear">
@@ -81,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chA-H3-ucj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="1014"/>
+            <point key="canvasLocation" x="750" y="667"/>
         </scene>
         <!--Snow Day Calculator-->
         <scene sceneID="8rg-9t-HNE">
@@ -95,34 +194,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run calculation for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-rQ-1l3">
-                                <rect key="frame" x="227" y="28" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aum-58-PAM">
-                                <rect key="frame" x="225" y="57" width="151" height="29"/>
-                                <segments>
-                                    <segment title="Today"/>
-                                    <segment title="Tomorrow"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many snow days have occurred?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRa-kj-dTI">
-                                <rect key="frame" x="156" y="93" width="288" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="n49-hv-ado">
-                                <rect key="frame" x="154" y="122" width="224" height="31"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-LD-Vdu">
-                                <rect key="frame" x="384" y="126" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9L-VV-K0W">
                                 <rect key="frame" x="268" y="550" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
@@ -130,22 +201,62 @@
                                     <segue destination="49e-Tb-3d3" kind="show" id="7bY-db-5sb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run calculation for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-rQ-1l3">
+                                <rect key="frame" x="227" y="72" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aum-58-PAM">
+                                <rect key="frame" x="225" y="101" width="151" height="29"/>
+                                <segments>
+                                    <segment title="Today"/>
+                                    <segment title="Tomorrow"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many snow days have occurred?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRa-kj-dTI">
+                                <rect key="frame" x="156" y="137" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="n49-hv-ado">
+                                <rect key="frame" x="154" y="166" width="224" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-LD-Vdu">
+                                <rect key="frame" x="384" y="170" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="erh-D2-SIM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n49-hv-ado" firstAttribute="trailing" secondItem="Aum-58-PAM" secondAttribute="trailing" id="1xo-3c-DTU"/>
-                            <constraint firstItem="IRa-kj-dTI" firstAttribute="centerX" secondItem="Aum-58-PAM" secondAttribute="centerX" id="1yG-Y3-KJn"/>
-                            <constraint firstItem="n49-hv-ado" firstAttribute="top" secondItem="IRa-kj-dTI" secondAttribute="bottom" constant="8" symbolic="YES" id="C1H-Qv-Kpm"/>
-                            <constraint firstItem="QCe-rQ-1l3" firstAttribute="top" secondItem="FJ2-8s-reS" secondAttribute="bottom" constant="8" symbolic="YES" id="CRB-XU-Gmr"/>
-                            <constraint firstItem="x9L-VV-K0W" firstAttribute="centerX" secondItem="IRa-kj-dTI" secondAttribute="centerX" id="F0t-f2-bEm"/>
-                            <constraint firstItem="QCe-rQ-1l3" firstAttribute="centerX" secondItem="fYj-X8-hc8" secondAttribute="centerX" id="IUb-Ym-oEe"/>
+                            <constraint firstItem="QCe-rQ-1l3" firstAttribute="top" secondItem="FJ2-8s-reS" secondAttribute="bottom" constant="8" symbolic="YES" id="5XY-re-8wV"/>
+                            <constraint firstItem="Aum-58-PAM" firstAttribute="trailing" secondItem="n49-hv-ado" secondAttribute="trailing" id="FoS-Kg-bCn"/>
                             <constraint firstAttribute="bottom" secondItem="x9L-VV-K0W" secondAttribute="bottom" constant="20" symbolic="YES" id="Kdb-9Y-8p3"/>
-                            <constraint firstItem="IRa-kj-dTI" firstAttribute="top" secondItem="Aum-58-PAM" secondAttribute="bottom" constant="8" symbolic="YES" id="L8W-aE-ucx"/>
-                            <constraint firstItem="Aum-58-PAM" firstAttribute="top" secondItem="QCe-rQ-1l3" secondAttribute="bottom" constant="8" symbolic="YES" id="Wuq-II-bMJ"/>
-                            <constraint firstItem="Aum-58-PAM" firstAttribute="centerX" secondItem="QCe-rQ-1l3" secondAttribute="centerX" id="cR5-0W-Cae"/>
-                            <constraint firstItem="n49-hv-ado" firstAttribute="leading" secondItem="IRa-kj-dTI" secondAttribute="leading" id="zbu-Bq-16w"/>
+                            <constraint firstItem="IRa-kj-dTI" firstAttribute="trailing" secondItem="ab7-LD-Vdu" secondAttribute="trailing" id="KuE-bd-Y5o"/>
+                            <constraint firstItem="IRa-kj-dTI" firstAttribute="leading" secondItem="n49-hv-ado" secondAttribute="leading" id="OFG-YP-veT"/>
+                            <constraint firstItem="Aum-58-PAM" firstAttribute="top" secondItem="QCe-rQ-1l3" secondAttribute="bottom" constant="8" symbolic="YES" id="Xsk-YI-PyJ"/>
+                            <constraint firstItem="n49-hv-ado" firstAttribute="centerY" secondItem="ab7-LD-Vdu" secondAttribute="centerY" id="aKD-57-aDz"/>
+                            <constraint firstItem="ab7-LD-Vdu" firstAttribute="leading" secondItem="n49-hv-ado" secondAttribute="trailing" constant="8" symbolic="YES" id="ahl-UT-n8c"/>
+                            <constraint firstItem="QCe-rQ-1l3" firstAttribute="centerX" secondItem="fYj-X8-hc8" secondAttribute="centerX" id="d9W-Zh-lh3"/>
+                            <constraint firstItem="IRa-kj-dTI" firstAttribute="top" secondItem="Aum-58-PAM" secondAttribute="bottom" constant="8" symbolic="YES" id="eNa-7b-szl"/>
+                            <constraint firstItem="QCe-rQ-1l3" firstAttribute="centerX" secondItem="Aum-58-PAM" secondAttribute="centerX" id="kRk-kh-YBc"/>
+                            <constraint firstItem="IRa-kj-dTI" firstAttribute="centerX" secondItem="x9L-VV-K0W" secondAttribute="centerX" id="scM-pP-2A6"/>
+                            <constraint firstItem="n49-hv-ado" firstAttribute="top" secondItem="IRa-kj-dTI" secondAttribute="bottom" constant="8" symbolic="YES" id="xbR-Xt-1NI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Snow Day Calculator" id="qyV-4n-Um0">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="Tlh-a4-CKL">
+                            <connections>
+                                <segue destination="9Po-bC-tNK" kind="show" id="LAA-8U-qFn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqE-hq-zUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
