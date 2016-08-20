@@ -18,15 +18,51 @@ import UIKit
 
 class InputController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var btnCalculate: UIButton!
     
-    var events: [String] = []
+    let today = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    
+    // (Event type, event text)
+    // 0 = default, 1 = blue background, 2 = orange background, 3 = red background
+    var events = [(Int, String)]()
+    
+    
+    //These are set to false if the calculation cannot be run on that day
+    var todayValid: Bool = true
+    var tomorrowValid: Bool = true
     
     let colorBackground = UIColor(red:0.00, green:0.22, blue:0.40, alpha:1.0)
+    let colorTint = UIColor(red:0.25, green:0.77, blue:1.00, alpha:1.0)
     
     override func viewDidLoad() {
         tableView.backgroundColor = colorBackground
         tableView.tableFooterView = UIView()
+        
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //Make sure the user doesn't try to run the program on the weekend or on specific dates
+        //checkDate()
+        
+        //Only run checkWeekend() if today or tomorrow is still valid
+        if (todayValid || tomorrowValid) {
+            checkWeekend()
+        }
+        
+        //Determine if the calculation should be available
+        if (!tomorrowValid && !todayValid) {
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
+            btnCalculate.enabled = false
+        } else if (!todayValid) {
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
+            segmentedControl.selectedSegmentIndex = 1
+        } else if (!tomorrowValid) {
+            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
+        }
     }
     
     //Number of rows in table
@@ -46,15 +82,69 @@ class InputController: UIViewController, UITableViewDataSource, UITableViewDeleg
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
         }
-            
-        cell!.textLabel?.text = events[indexPath.row]
+
+        cell!.textLabel?.text = events[indexPath.row].1
         cell!.textLabel?.textColor = UIColor.whiteColor()
         cell!.textLabel?.textAlignment = NSTextAlignment.Center
         cell!.textLabel?.numberOfLines = 0
-        cell!.backgroundColor = colorBackground
-            
-        return cell!
         
+        switch (events[indexPath.row].0) {
+        case 1:
+            cell!.backgroundColor = colorTint
+            cell!.contentView.backgroundColor = colorTint
+        default:
+            cell!.backgroundColor = colorBackground
+        }
+        
+        return cell!
+    }
+    
+    func checkDate() {
+        let month = calendar.component(.Month, fromDate: today)
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        
+        let todaytext = formatter.stringFromDate(today)
+        events += [(0, "Current Date: \(todaytext)")]
+        
+//        let tomorrow = NSCalendar.currentCalendar()
+//            .dateByAddingUnit(
+//                .Day,
+//                value: 1,
+//                toDate: today,
+//                options: []
+//        )
+        
+        // Check for days school is not in session (such as Winter Break, development days, etc.)
+        if (month > 6 && month <= 8) {
+            //Summer break (July and August)
+            events += [(1, "Enjoy your summer!")]
+            todayValid = false;
+            tomorrowValid = false;
+        } // TODO: Add the rest of the conditions
+        
+        tableView.reloadData()
+    }
+    
+    func checkWeekend() {
+    //Friday is 6
+    //Saturday is 7
+    //Sunday is 8
+        
+    let weekday = calendar.component(.Weekday, fromDate: today)
+    
+        if (weekday == 6) {
+            events+=[(1, "Tomorrow is Saturday.")]
+            tomorrowValid = false
+        } else if (weekday == 7) {
+            events+=[(1, "Today is Saturday. Try again tomorrow!")]
+            todayValid = false
+            tomorrowValid = false
+        } else if (weekday == 8) {
+            events+=[(1, "Today is Sunday.")]
+            todayValid = false
+        }
+        tableView.reloadData()
     }
 }
-
