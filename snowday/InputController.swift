@@ -14,4 +14,47 @@
  * limitations under the License.
  */
 
-import Foundation
+import UIKit
+
+class InputController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var events: [String] = []
+    
+    let colorBackground = UIColor(red:0.00, green:0.22, blue:0.40, alpha:1.0)
+    
+    override func viewDidLoad() {
+        tableView.backgroundColor = colorBackground
+        tableView.tableFooterView = UIView()
+    }
+    
+    //Number of rows in table
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    //Contents of each cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell: UITableViewCell?
+        
+        let CellIdentifier: String = "InformationCell"
+            
+        cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
+            
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+        }
+            
+        cell!.textLabel?.text = events[indexPath.row]
+        cell!.textLabel?.textColor = UIColor.whiteColor()
+        cell!.textLabel?.textAlignment = NSTextAlignment.Center
+        cell!.textLabel?.numberOfLines = 0
+        cell!.backgroundColor = colorBackground
+            
+        return cell!
+        
+    }
+}
+

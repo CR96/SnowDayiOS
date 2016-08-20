@@ -203,7 +203,7 @@
         <!--Snow Day Calculator-->
         <scene sceneID="8rg-9t-HNE">
             <objects>
-                <viewController title="Snow Day Calculator" id="2JX-Yz-O43" sceneMemberID="viewController">
+                <viewController title="Snow Day Calculator" id="2JX-Yz-O43" customClass="InputController" customModule="snowday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FJ2-8s-reS"/>
                         <viewControllerLayoutGuide type="bottom" id="hTC-Sm-FDQ"/>
@@ -250,20 +250,43 @@
                                     <segment title="Tomorrow"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5go-Ru-VwZ">
+                                <rect key="frame" x="0.0" y="204" width="600" height="338"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InformationCell" id="ELg-89-n9j">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ELg-89-n9j" id="PZx-pE-Lan">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.0" green="0.21960784310000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2JX-Yz-O43" id="Fs1-Tn-VtR"/>
+                                    <outlet property="delegate" destination="2JX-Yz-O43" id="B26-hP-W7V"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2196078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="x9L-VV-K0W" firstAttribute="top" secondItem="5go-Ru-VwZ" secondAttribute="bottom" constant="8" symbolic="YES" id="0nF-ZS-0wo"/>
                             <constraint firstItem="QCe-rQ-1l3" firstAttribute="top" secondItem="FJ2-8s-reS" secondAttribute="bottom" constant="8" symbolic="YES" id="5XY-re-8wV"/>
                             <constraint firstItem="Aum-58-PAM" firstAttribute="trailing" secondItem="n49-hv-ado" secondAttribute="trailing" id="FoS-Kg-bCn"/>
+                            <constraint firstItem="5go-Ru-VwZ" firstAttribute="leading" secondItem="fYj-X8-hc8" secondAttribute="leading" id="HrF-zd-mt3"/>
                             <constraint firstAttribute="bottom" secondItem="x9L-VV-K0W" secondAttribute="bottom" constant="20" symbolic="YES" id="Kdb-9Y-8p3"/>
                             <constraint firstItem="IRa-kj-dTI" firstAttribute="trailing" secondItem="ab7-LD-Vdu" secondAttribute="trailing" id="KuE-bd-Y5o"/>
                             <constraint firstItem="IRa-kj-dTI" firstAttribute="leading" secondItem="n49-hv-ado" secondAttribute="leading" id="OFG-YP-veT"/>
+                            <constraint firstItem="5go-Ru-VwZ" firstAttribute="centerX" secondItem="x9L-VV-K0W" secondAttribute="centerX" id="PnL-75-EKm"/>
                             <constraint firstItem="Aum-58-PAM" firstAttribute="top" secondItem="QCe-rQ-1l3" secondAttribute="bottom" constant="8" symbolic="YES" id="Xsk-YI-PyJ"/>
                             <constraint firstItem="n49-hv-ado" firstAttribute="centerY" secondItem="ab7-LD-Vdu" secondAttribute="centerY" id="aKD-57-aDz"/>
                             <constraint firstItem="ab7-LD-Vdu" firstAttribute="leading" secondItem="n49-hv-ado" secondAttribute="trailing" constant="8" symbolic="YES" id="ahl-UT-n8c"/>
                             <constraint firstItem="QCe-rQ-1l3" firstAttribute="centerX" secondItem="fYj-X8-hc8" secondAttribute="centerX" id="d9W-Zh-lh3"/>
                             <constraint firstItem="IRa-kj-dTI" firstAttribute="top" secondItem="Aum-58-PAM" secondAttribute="bottom" constant="8" symbolic="YES" id="eNa-7b-szl"/>
                             <constraint firstItem="QCe-rQ-1l3" firstAttribute="centerX" secondItem="Aum-58-PAM" secondAttribute="centerX" id="kRk-kh-YBc"/>
+                            <constraint firstItem="5go-Ru-VwZ" firstAttribute="top" secondItem="n49-hv-ado" secondAttribute="bottom" constant="8" symbolic="YES" id="sVh-eH-rXh"/>
                             <constraint firstItem="IRa-kj-dTI" firstAttribute="centerX" secondItem="x9L-VV-K0W" secondAttribute="centerX" id="scM-pP-2A6"/>
                             <constraint firstItem="n49-hv-ado" firstAttribute="top" secondItem="IRa-kj-dTI" secondAttribute="bottom" constant="8" symbolic="YES" id="xbR-Xt-1NI"/>
                         </constraints>
@@ -275,6 +298,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5go-Ru-VwZ" id="fQ2-7n-1NA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqE-hq-zUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
