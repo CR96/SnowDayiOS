@@ -14,4 +14,32 @@
  * limitations under the License.
  */
 
-import Foundation
+import UIKit
+
+class AboutController: UIViewController {
+    
+    @IBOutlet weak var btnTwitter: UIButton!
+    @IBOutlet weak var btnMail: UIButton!
+    @IBOutlet weak var btnWeb: UIButton!
+    @IBOutlet weak var btnGit: UIButton!
+    
+    @IBAction func twitterPressed(sender: UIButton) {
+        // TODO: Get Twitter timeline with Fabric
+    }
+    
+    @IBAction func mailPressed(sender: UIButton) {
+        let email = "gbsnowday@gmail.com"
+        let url = NSURL(string: "mailto:\(email)")
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    @IBAction func webPressed(sender: UIButton) {
+        let url = NSURL(string: "https://gbsnowday.weebly.com")
+        UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    @IBAction func gitPressed(sender: UIButton) {
+        let url = NSURL(string: "https://github.com/cr96/snowdayios")
+        UIApplication.sharedApplication().openURL(url!)
+    }
+}

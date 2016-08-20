@@ -64,7 +64,7 @@
         <!--About-->
         <scene sceneID="ANe-St-wff">
             <objects>
-                <viewController title="About" id="9Po-bC-tNK" sceneMemberID="viewController">
+                <viewController title="About" id="9Po-bC-tNK" customClass="AboutController" customModule="snowday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yqo-il-ha2"/>
                         <viewControllerLayoutGuide type="bottom" id="jxX-Dk-BlJ"/>
@@ -79,18 +79,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTF-CK-ggT">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
                                         <state key="normal" title="Twitter"/>
+                                        <connections>
+                                            <action selector="twitterPressed:" destination="9Po-bC-tNK" eventType="touchUpInside" id="vX0-DX-GgG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I24-hY-de9">
                                         <rect key="frame" x="64" y="0.0" width="37" height="30"/>
                                         <state key="normal" title="Email"/>
+                                        <connections>
+                                            <action selector="mailPressed:" destination="9Po-bC-tNK" eventType="touchUpInside" id="Hof-gd-ubj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4I2-Tq-BDZ">
                                         <rect key="frame" x="117" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="Web"/>
+                                        <connections>
+                                            <action selector="webPressed:" destination="9Po-bC-tNK" eventType="touchUpInside" id="N3d-di-xRJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3s-kp-vVd">
                                         <rect key="frame" x="164" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Git"/>
+                                        <connections>
+                                            <action selector="gitPressed:" destination="9Po-bC-tNK" eventType="touchUpInside" id="nzu-Gr-l4L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -139,6 +151,12 @@
                             <constraint firstAttribute="bottom" secondItem="ngD-WF-wXJ" secondAttribute="bottom" constant="20" symbolic="YES" id="zV7-zS-sVz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGit" destination="Y3s-kp-vVd" id="9IV-1k-byN"/>
+                        <outlet property="btnMail" destination="I24-hY-de9" id="sq8-f7-OsC"/>
+                        <outlet property="btnTwitter" destination="rTF-CK-ggT" id="dph-H9-FVg"/>
+                        <outlet property="btnWeb" destination="4I2-Tq-BDZ" id="Geq-B7-7Tn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lQ-0O-NeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
