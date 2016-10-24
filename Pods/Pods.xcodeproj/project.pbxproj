@@ -41,6 +41,7 @@
 		19D5404D9676256722F2C0116A7C58BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CC3F6261E7B36211EDBEF38C740D8B8 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
 		2079693CB6E6E822BCA9EB1FC94B0370 /* Pods-snowdayTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snowdayTests-resources.sh"; sourceTree = "<group>"; };
+		23D8BB8C42815F961D57BDFE23001030 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2D5448DBC944D0763B12D9AAC4CEDC48 /* Pods-snowdayTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-snowdayTests-umbrella.h"; sourceTree = "<group>"; };
 		2E6D38B955A7B8CC6F74024453B9FD14 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
 		2FEB57CA01F6F5209564A5B0B7B211A8 /* Pods_snowday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,9 +57,7 @@
 		5B8D460F49F08364BB02C054B5986A4B /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB156CAF2FE79487FB0FE98D0C66BC5 /* Pods-snowdayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snowdayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		679B48023D48D76BF0A34C7F8B6E5A68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C59145474A3CC42DE49D1E5C10819E1 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		6F7639668F43D001B31CA668A0FECAE7 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
-		74FE055DFC83A646A73CF759E3F8369A /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		751984888A86A3D40842B4B2992A9D84 /* Pods-snowdayUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-snowdayUITests-umbrella.h"; sourceTree = "<group>"; };
 		7A0CF36E9B5F5ABE645B1C4556F608C1 /* Pods-snowday-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-snowday-resources.sh"; sourceTree = "<group>"; };
 		8083F4AD9B2F40F408550CA3DC9B9AA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		DBD2C57CE0DCEA8BE6B85F05810FD2CB /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		DE5F510F87EB86998C294B5FE2EA87DD /* Pods-snowdayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snowdayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DFC0C615C4A9359AA5DC6F7133BB0957 /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
+		E1D844E86DB9D7EFAC9428D23872B22E /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = iOS/TwitterKit.framework; sourceTree = "<group>"; };
 		E28574C08F0519FFE99ECE208A02B036 /* Pods-snowday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-snowday.release.xcconfig"; sourceTree = "<group>"; };
 		E294ADFE99F6A1DE7D21B3BD0B3A917C /* Pods-snowdayUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-snowdayUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F21EB7698173D1A9F288C8B007950B22 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
@@ -148,14 +148,6 @@
 				AB7CDED7A6168C64A1B198DDEFFF8FFA /* Frameworks */,
 			);
 			path = TwitterCore;
-			sourceTree = "<group>";
-		};
-		377B9CD3B226EB9E0F81C0752029AC72 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				74FE055DFC83A646A73CF759E3F8369A /* TwitterKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3CECC62A5B8A70F4612F5D961BD8B4F8 /* Fabric */ = {
@@ -280,6 +272,14 @@
 			path = "Target Support Files/Pods-snowdayTests";
 			sourceTree = "<group>";
 		};
+		8E05F799850855ABC310F7B170733B82 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23D8BB8C42815F961D57BDFE23001030 /* TwitterKitResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A498B6DA2C5925CEF8C20CE15B95DDAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +299,8 @@
 		B90ADEEE1E97A58419F2780FD29A74C4 /* TwitterKit */ = {
 			isa = PBXGroup;
 			children = (
-				377B9CD3B226EB9E0F81C0752029AC72 /* Frameworks */,
-				DD50D5029D451864DE44CCFBFE5E4713 /* Resources */,
+				DEC838EDCD32B19018EBCEFB89A4E08D /* Frameworks */,
+				8E05F799850855ABC310F7B170733B82 /* Resources */,
 			);
 			path = TwitterKit;
 			sourceTree = "<group>";
@@ -332,12 +332,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD50D5029D451864DE44CCFBFE5E4713 /* Resources */ = {
+		DEC838EDCD32B19018EBCEFB89A4E08D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C59145474A3CC42DE49D1E5C10819E1 /* TwitterKitResources.bundle */,
+				E1D844E86DB9D7EFAC9428D23872B22E /* TwitterKit.framework */,
 			);
-			name = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E4E98FF6B53722EE7279D454E7156B9F /* Targets Support Files */ = {

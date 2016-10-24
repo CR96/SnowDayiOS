@@ -1,12 +1,12 @@
 PODS:
-  - Crashlytics (3.7.3):
+  - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.8)
-  - SWXMLHash (2.5.0)
-  - TwitterCore (2.3.0):
+  - Fabric (1.6.10)
+  - SWXMLHash (3.0.2)
+  - TwitterCore (2.5.0):
     - Fabric
-  - TwitterKit (2.3.0):
-    - TwitterCore (= 2.3.0)
+  - TwitterKit (2.5.0):
+    - TwitterCore (= 2.5.0)
 
 DEPENDENCIES:
   - Crashlytics
@@ -16,12 +16,12 @@ DEPENDENCIES:
   - TwitterKit
 
 SPEC CHECKSUMS:
-  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
-  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
-  SWXMLHash: 04158642e0c90c52274db7914032edd41bed9a41
-  TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
-  TwitterKit: 8a383da8d9c21b0423716381ea8bbfce20622d91
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
+  SWXMLHash: e0f6935971f01b06fb228cf435510d998ecde647
+  TwitterCore: 95c46af93112768a7983bd370d66023553601d01
+  TwitterKit: dd8042698b0ff5bd3066fa919b3b2b50d8eed829
 
 PODFILE CHECKSUM: f620c8c585e4132f15387d7fd973101c367fbcdc
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
