@@ -107,6 +107,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045C620B1DC8553F00B14ACA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C9DFE91D669D5100D0C46C /* InputController.swift */,
+				04C9DFEB1D669D5C00D0C46C /* AboutController.swift */,
+				04C9DFED1D669D6A00D0C46C /* PercentController.swift */,
+				04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */,
+				04C9DFF11D669D7F00D0C46C /* WeatherController.swift */,
+				0470E10D1D67AA4F0011B142 /* NavigationController.swift */,
+				0470E10F1D67B1C80011B142 /* TabBarController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		045C620C1DC8556100B14ACA /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		0499C0E71D660E33002F9914 = {
 			isa = PBXGroup;
 			children = (
@@ -132,18 +153,13 @@
 		0499C0F21D660E34002F9914 /* snowday */ = {
 			isa = PBXGroup;
 			children = (
+				045C620C1DC8556100B14ACA /* model */,
+				045C620B1DC8553F00B14ACA /* controller */,
 				0499C0F31D660E34002F9914 /* AppDelegate.swift */,
 				0499C0F91D660E34002F9914 /* Main.storyboard */,
 				0499C0FC1D660E34002F9914 /* Assets.xcassets */,
 				0499C0FE1D660E34002F9914 /* LaunchScreen.storyboard */,
 				0499C1011D660E34002F9914 /* Info.plist */,
-				04C9DFE91D669D5100D0C46C /* InputController.swift */,
-				04C9DFEB1D669D5C00D0C46C /* AboutController.swift */,
-				04C9DFED1D669D6A00D0C46C /* PercentController.swift */,
-				04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */,
-				04C9DFF11D669D7F00D0C46C /* WeatherController.swift */,
-				0470E10D1D67AA4F0011B142 /* NavigationController.swift */,
-				0470E10F1D67B1C80011B142 /* TabBarController.swift */,
 			);
 			path = snowday;
 			sourceTree = "<group>";
