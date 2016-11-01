@@ -22,8 +22,8 @@ class InputController: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnCalculate: UIButton!
     
-    let today = NSDate()
-    let calendar = NSCalendar.currentCalendar()
+    let today = Date()
+    let calendar = Calendar.current
     
     // (Event type, event text)
     // 0 = default, 1 = blue background, 2 = orange background, 3 = red background
@@ -54,38 +54,38 @@ class InputController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         //Determine if the calculation should be available
         if (!tomorrowValid && !todayValid) {
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
-            btnCalculate.enabled = false
+            segmentedControl.setEnabled(false, forSegmentAt: 0)
+            segmentedControl.setEnabled(false, forSegmentAt: 1)
+            btnCalculate.isEnabled = false
         } else if (!todayValid) {
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 0)
+            segmentedControl.setEnabled(false, forSegmentAt: 0)
             segmentedControl.selectedSegmentIndex = 1
         } else if (!tomorrowValid) {
-            segmentedControl.setEnabled(false, forSegmentAtIndex: 1)
+            segmentedControl.setEnabled(false, forSegmentAt: 1)
         }
     }
     
     //Number of rows in table
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
     
     //Contents of each cell
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell?
         
         let CellIdentifier: String = "InformationCell"
             
-        cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
+        cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
             
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
         }
 
         cell!.textLabel?.text = events[indexPath.row].1
-        cell!.textLabel?.textColor = UIColor.whiteColor()
-        cell!.textLabel?.textAlignment = NSTextAlignment.Center
+        cell!.textLabel?.textColor = UIColor.white
+        cell!.textLabel?.textAlignment = NSTextAlignment.center
         cell!.textLabel?.numberOfLines = 0
         
         switch (events[indexPath.row].0) {
@@ -100,12 +100,12 @@ class InputController: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func checkDate() {
-        let month = calendar.component(.Month, fromDate: today)
+        let month = (calendar as NSCalendar).component(.month, from: today)
         
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.LongStyle
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.long
         
-        let todaytext = formatter.stringFromDate(today)
+        let todaytext = formatter.string(from: today)
         events += [(0, "Current Date: \(todaytext)")]
         
 //        let tomorrow = NSCalendar.currentCalendar()
@@ -132,7 +132,7 @@ class InputController: UIViewController, UITableViewDataSource, UITableViewDeleg
     //Saturday is 7
     //Sunday is 8
         
-    let weekday = calendar.component(.Weekday, fromDate: today)
+    let weekday = (calendar as NSCalendar).component(.weekday, from: today)
     
         if (weekday == 6) {
             events+=[(1, "Tomorrow is Saturday.")]

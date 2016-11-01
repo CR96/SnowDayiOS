@@ -23,23 +23,23 @@ class AboutController: UIViewController {
     @IBOutlet weak var btnWeb: UIButton!
     @IBOutlet weak var btnGit: UIButton!
     
-    @IBAction func twitterPressed(sender: UIButton) {
+    @IBAction func twitterPressed(_ sender: UIButton) {
         // TODO: Get Twitter timeline with Fabric
     }
     
-    @IBAction func mailPressed(sender: UIButton) {
+    @IBAction func mailPressed(_ sender: UIButton) {
         let email = "gbsnowday@gmail.com"
-        let url = NSURL(string: "mailto:\(email)")
-        UIApplication.sharedApplication().openURL(url!)
+        let url = URL(string: "mailto:\(email)")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
     
-    @IBAction func webPressed(sender: UIButton) {
-        let url = NSURL(string: "https://gbsnowday.weebly.com")
-        UIApplication.sharedApplication().openURL(url!)
+    @IBAction func webPressed(_ sender: UIButton) {
+        let url = URL(string: "https://gbsnowday.weebly.com")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
     
-    @IBAction func gitPressed(sender: UIButton) {
-        let url = NSURL(string: "https://github.com/cr96/snowdayios")
-        UIApplication.sharedApplication().openURL(url!)
+    @IBAction func gitPressed(_ sender: UIButton) {
+        let url = URL(string: "https://github.com/cr96/snowdayios")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
 }

@@ -22,7 +22,7 @@ class NavigationController: UINavigationController {
 
     
     override func viewDidLoad() {
-        navigationBar.barStyle = UIBarStyle.Black
+        navigationBar.barStyle = UIBarStyle.black
         navigationBar.barTintColor = colorPrimary
     }
 }

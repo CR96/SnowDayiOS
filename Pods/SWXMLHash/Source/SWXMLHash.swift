@@ -32,22 +32,22 @@ import Foundation
 let rootElementName = "SWXMLHash_Root_Element"
 
 /// Parser options
-public class SWXMLHashOptions {
+open class SWXMLHashOptions {
     internal init() {}
 
     /// determines whether to parse the XML with lazy parsing or not
-    public var shouldProcessLazily = false
+    open var shouldProcessLazily = false
 
     /// determines whether to parse XML namespaces or not (forwards to
     /// `XMLParser.shouldProcessNamespaces`)
-    public var shouldProcessNamespaces = false
+    open var shouldProcessNamespaces = false
 }
 
 /// Simple XML parser
-public class SWXMLHash {
+open class SWXMLHash {
     let options: SWXMLHashOptions
 
-    private init(_ options: SWXMLHashOptions = SWXMLHashOptions()) {
+    fileprivate init(_ options: SWXMLHashOptions = SWXMLHashOptions()) {
         self.options = options
     }
 
@@ -59,7 +59,7 @@ public class SWXMLHash {
         options to be set
     - returns: an `SWXMLHash` instance
     */
-    class public func config(_ configAction: (SWXMLHashOptions) -> ()) -> SWXMLHash {
+    class open func config(_ configAction: (SWXMLHashOptions) -> ()) -> SWXMLHash {
         let opts = SWXMLHashOptions()
         configAction(opts)
         return SWXMLHash(opts)
@@ -73,7 +73,7 @@ public class SWXMLHash {
         string containing XML.
     - returns: an `XMLIndexer` instance that can be iterated over
     */
-    public func parse(_ xml: String) -> XMLIndexer {
+    open func parse(_ xml: String) -> XMLIndexer {
         return parse(xml.data(using: String.Encoding.utf8)!)
     }
 
@@ -84,7 +84,7 @@ public class SWXMLHash {
         - data: a `Data` instance containing XML
         - returns: an `XMLIndexer` instance that can be iterated over
     */
-    public func parse(_ data: Data) -> XMLIndexer {
+    open func parse(_ data: Data) -> XMLIndexer {
         let parser: SimpleXmlParser = options.shouldProcessLazily
             ? LazyXMLParser(options)
             : FullXMLParser(options)
@@ -97,7 +97,7 @@ public class SWXMLHash {
     - parameter xml: The XML to be parsed
     - returns: An XMLIndexer instance that is used to look up elements in the XML
     */
-    class public func parse(_ xml: String) -> XMLIndexer {
+    class open func parse(_ xml: String) -> XMLIndexer {
         return SWXMLHash().parse(xml)
     }
 
@@ -107,7 +107,7 @@ public class SWXMLHash {
     - parameter data: The XML to be parsed
     - returns: An XMLIndexer instance that is used to look up elements in the XML
     */
-    class public func parse(_ data: Data) -> XMLIndexer {
+    class open func parse(_ data: Data) -> XMLIndexer {
         return SWXMLHash().parse(data)
     }
 
@@ -117,7 +117,7 @@ public class SWXMLHash {
     - parameter xml: The XML to be parsed
     - returns: An XMLIndexer instance that is used to look up elements in the XML
     */
-    class public func lazy(_ xml: String) -> XMLIndexer {
+    class open func lazy(_ xml: String) -> XMLIndexer {
         return config { conf in conf.shouldProcessLazily = true }.parse(xml)
     }
 
@@ -127,7 +127,7 @@ public class SWXMLHash {
     - parameter data: The XML to be parsed
     - returns: An XMLIndexer instance that is used to look up elements in the XML
     */
-    class public func lazy(_ data: Data) -> XMLIndexer {
+    class open func lazy(_ data: Data) -> XMLIndexer {
         return config { conf in conf.shouldProcessLazily = true }.parse(data)
     }
 }
@@ -347,7 +347,7 @@ class FullXMLParser: NSObject, SimpleXmlParser, XMLParserDelegate {
 }
 
 /// Represents an indexed operation against a lazily parsed `XMLIndexer`
-public class IndexOp {
+open class IndexOp {
     var index: Int
     let key: String
 
@@ -367,7 +367,7 @@ public class IndexOp {
 
 /// Represents a collection of `IndexOp` instances. Provides a means of iterating them
 /// to find a match in a lazily parsed `XMLIndexer` instance.
-public class IndexOps {
+open class IndexOps {
     var ops: [IndexOp] = []
 
     let parser: LazyXMLParser
@@ -401,20 +401,20 @@ public class IndexOps {
 
 /// Error type that is thrown when an indexing or parsing operation fails.
 public enum IndexingError: Error {
-    case Attribute(attr: String)
-    case AttributeValue(attr: String, value: String)
-    case Key(key: String)
-    case Index(idx: Int)
-    case Init(instance: AnyObject)
-    case Error
+    case attribute(attr: String)
+    case attributeValue(attr: String, value: String)
+    case key(key: String)
+    case index(idx: Int)
+    case `init`(instance: AnyObject)
+    case error
 }
 
 /// Returned from SWXMLHash, allows easy element lookup into XML data.
 public enum XMLIndexer: Sequence {
     case Element(XMLElement)
-    case List([XMLElement])
-    case Stream(IndexOps)
-    case XMLError(IndexingError)
+    case list([XMLElement])
+    case stream(IndexOps)
+    case xmlError(IndexingError)
 
 
     /// The underlying XMLElement at the currently indexed level of XML.
@@ -422,7 +422,7 @@ public enum XMLIndexer: Sequence {
         switch self {
         case .Element(let elem):
             return elem
-        case .Stream(let ops):
+        case .stream(let ops):
             let list = ops.findElements()
             return list.element
         default:
@@ -433,7 +433,7 @@ public enum XMLIndexer: Sequence {
     /// All elements at the currently indexed level
     public var all: [XMLIndexer] {
         switch self {
-        case .List(let list):
+        case .list(let list):
             var xmlList = [XMLIndexer]()
             for elem in list {
                 xmlList.append(XMLIndexer(elem))
@@ -441,7 +441,7 @@ public enum XMLIndexer: Sequence {
             return xmlList
         case .Element(let elem):
             return [XMLIndexer(elem)]
-        case .Stream(let ops):
+        case .stream(let ops):
             let list = ops.findElements()
             return list.all
         default:
@@ -471,21 +471,21 @@ public enum XMLIndexer: Sequence {
     */
     public func withAttr(_ attr: String, _ value: String) throws -> XMLIndexer {
         switch self {
-        case .Stream(let opStream):
+        case .stream(let opStream):
             let match = opStream.findElements()
             return try match.withAttr(attr, value)
-        case .List(let list):
+        case .list(let list):
             if let elem = list.filter({$0.attribute(by: attr)?.text == value}).first {
                 return .Element(elem)
             }
-            throw IndexingError.AttributeValue(attr: attr, value: value)
+            throw IndexingError.attributeValue(attr: attr, value: value)
         case .Element(let elem):
             if elem.attribute(by: attr)?.text == value {
                 return .Element(elem)
             }
-            throw IndexingError.AttributeValue(attr: attr, value: value)
+            throw IndexingError.attributeValue(attr: attr, value: value)
         default:
-            throw IndexingError.Attribute(attr: attr)
+            throw IndexingError.attribute(attr: attr)
         }
     }
 
@@ -500,9 +500,9 @@ public enum XMLIndexer: Sequence {
         case let value as XMLElement:
             self = .Element(value)
         case let value as LazyXMLParser:
-            self = .Stream(IndexOps(parser: value))
+            self = .stream(IndexOps(parser: value))
         default:
-            throw IndexingError.Init(instance: rawObject)
+            throw IndexingError(instance: rawObject)
         }
     }
 
@@ -516,7 +516,7 @@ public enum XMLIndexer: Sequence {
     }
 
     init(_ stream: LazyXMLParser) {
-        self = .Stream(IndexOps(parser: stream))
+        self = .stream(IndexOps(parser: stream))
     }
 
     /**
@@ -528,22 +528,22 @@ public enum XMLIndexer: Sequence {
     */
     public func byKey(_ key: String) throws -> XMLIndexer {
         switch self {
-        case .Stream(let opStream):
+        case .stream(let opStream):
             let op = IndexOp(key)
             opStream.ops.append(op)
-            return .Stream(opStream)
+            return .stream(opStream)
         case .Element(let elem):
             let match = elem.xmlChildren.filter({ $0.name == key })
             if !match.isEmpty {
                 if match.count == 1 {
                     return .Element(match[0])
                 } else {
-                    return .List(match)
+                    return .list(match)
                 }
             }
             fallthrough
         default:
-            throw IndexingError.Key(key: key)
+            throw IndexingError.key(key: key)
         }
     }
 
@@ -557,9 +557,9 @@ public enum XMLIndexer: Sequence {
         do {
            return try self.byKey(key)
         } catch let error as IndexingError {
-            return .XMLError(error)
+            return .xmlError(error)
         } catch {
-            return .XMLError(IndexingError.Key(key: key))
+            return .xmlError(IndexingError.key(key: key))
         }
     }
 
@@ -572,21 +572,21 @@ public enum XMLIndexer: Sequence {
     */
     public func byIndex(_ index: Int) throws -> XMLIndexer {
         switch self {
-        case .Stream(let opStream):
+        case .stream(let opStream):
             opStream.ops[opStream.ops.count - 1].index = index
-            return .Stream(opStream)
-        case .List(let list):
+            return .stream(opStream)
+        case .list(let list):
             if index <= list.count {
                 return .Element(list[index])
             }
-            return .XMLError(IndexingError.Index(idx: index))
+            return .xmlError(IndexingError.index(idx: index))
         case .Element(let elem):
             if index == 0 {
                 return .Element(elem)
             }
             fallthrough
         default:
-            return .XMLError(IndexingError.Index(idx: index))
+            return .xmlError(IndexingError.index(idx: index))
         }
     }
 
@@ -600,9 +600,9 @@ public enum XMLIndexer: Sequence {
         do {
             return try byIndex(index)
         } catch let error as IndexingError {
-            return .XMLError(error)
+            return .xmlError(error)
         } catch {
-            return .XMLError(IndexingError.Index(idx: index))
+            return .xmlError(IndexingError.index(idx: index))
         }
     }
 
@@ -637,7 +637,7 @@ extension XMLIndexer: CustomStringConvertible {
     /// The XML representation of the XMLIndexer at the current level
     public var description: String {
         switch self {
-        case .List(let list):
+        case .list(let list):
             return list.map { $0.description }.joined(separator: "")
         case .Element(let elem):
             if elem.name == rootElementName {
@@ -655,17 +655,17 @@ extension IndexingError: CustomStringConvertible {
     /// The description for the `XMLIndexer.Error`.
     public var description: String {
         switch self {
-        case .Attribute(let attr):
+        case .attribute(let attr):
             return "XML Attribute Error: Missing attribute [\"\(attr)\"]"
-        case .AttributeValue(let attr, let value):
+        case .attributeValue(let attr, let value):
             return "XML Attribute Error: Missing attribute [\"\(attr)\"] with value [\"\(value)\"]"
-        case .Key(let key):
+        case .key(let key):
             return "XML Element Error: Incorrect key [\"\(key)\"]"
-        case .Index(let index):
+        case .index(let index):
             return "XML Element Error: Incorrect index [\"\(index)\"]"
-        case .Init(let instance):
+        case .init(let instance):
             return "XML Indexer Error: initialization with Object [\"\(instance)\"]"
-        case .Error:
+        case .error:
             return "Unknown Error"
         }
     }
@@ -675,9 +675,9 @@ extension IndexingError: CustomStringConvertible {
 public protocol XMLContent: CustomStringConvertible { }
 
 /// Models a text element
-public class TextElement: XMLContent {
+open class TextElement: XMLContent {
     /// The underlying text value
-    public let text: String
+    open let text: String
     init(text: String) {
         self.text = text
     }
@@ -693,13 +693,13 @@ public struct XMLAttribute {
 }
 
 /// Models an XML element, including name, text and attributes
-public class XMLElement: XMLContent {
+open class XMLElement: XMLContent {
     /// The name of the element
-    public let name: String
+    open let name: String
 
     /// The attributes of the element
     @available(*, deprecated, message: "See `allAttributes` instead, which introduces the XMLAttribute type over a simple String type")
-    public var attributes: [String:String] {
+    open var attributes: [String:String] {
         var attrMap = [String: String]()
         for (name, attr) in allAttributes {
             attrMap[name] = attr.text
@@ -707,14 +707,14 @@ public class XMLElement: XMLContent {
         return attrMap
     }
 
-    public var allAttributes = [String:XMLAttribute]()
+    open var allAttributes = [String:XMLAttribute]()
 
-    public func attribute(by name: String) -> XMLAttribute? {
+    open func attribute(by name: String) -> XMLAttribute? {
         return allAttributes[name]
     }
 
     /// The inner text of the element, if it exists
-    public var text: String? {
+    open var text: String? {
         return children
             .map({ $0 as? TextElement })
             .flatMap({ $0 })
@@ -722,7 +722,7 @@ public class XMLElement: XMLContent {
     }
 
     /// All child elements (text or XML)
-    public var children = [XMLContent]()
+    open var children = [XMLContent]()
     var count: Int = 0
     var index: Int
 

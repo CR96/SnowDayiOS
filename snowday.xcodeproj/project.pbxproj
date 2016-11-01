@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0452A39B1DC8432D00BB3D6E /* Pods_snowdayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0452A39A1DC8432D00BB3D6E /* Pods_snowdayTests.framework */; };
+		0452A39D1DC8433500BB3D6E /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0452A39C1DC8433500BB3D6E /* SWXMLHash.framework */; };
 		0470E10E1D67AA4F0011B142 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470E10D1D67AA4F0011B142 /* NavigationController.swift */; };
 		0470E1101D67B1C80011B142 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470E10F1D67B1C80011B142 /* TabBarController.swift */; };
 		0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499C0F31D660E34002F9914 /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0452A39A1DC8432D00BB3D6E /* Pods_snowdayTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_snowdayTests.framework; path = "../Library/Developer/Xcode/DerivedData/snowday-bmzgrcxlzwsjiwcdjqhkfrfxtafm/Build/Products/Debug-iphonesimulator/Pods_snowdayTests.framework"; sourceTree = "<group>"; };
+		0452A39C1DC8433500BB3D6E /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = "../Library/Developer/Xcode/DerivedData/snowday-bmzgrcxlzwsjiwcdjqhkfrfxtafm/Build/Products/Debug-iphonesimulator/SWXMLHash/SWXMLHash.framework"; sourceTree = "<group>"; };
 		0470E10D1D67AA4F0011B142 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0470E10F1D67B1C80011B142 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0499C0F01D660E34002F9914 /* snowday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F3722CEA64522D7404A656 /* Pods_snowday.framework in Frameworks */,
+				0452A39B1DC8432D00BB3D6E /* Pods_snowdayTests.framework in Frameworks */,
+				0452A39D1DC8433500BB3D6E /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +182,8 @@
 		3FED18773BC3A8AA14F61024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0452A39C1DC8433500BB3D6E /* SWXMLHash.framework */,
+				0452A39A1DC8432D00BB3D6E /* Pods_snowdayTests.framework */,
 				F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */,
 				C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */,
 				3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */,
@@ -254,19 +262,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = gbsnowday;
 				TargetAttributes = {
 					0499C0EF1D660E33002F9914 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NLBXKET8N6;
+						LastSwiftMigration = 0810;
 					};
 					0499C1051D660E34002F9914 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 0499C0EF1D660E33002F9914;
 					};
 					0499C1101D660E34002F9914 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 0499C0EF1D660E33002F9914;
 					};
 				};
@@ -522,8 +533,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -545,7 +558,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -568,8 +581,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -585,9 +600,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -597,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -604,6 +621,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -611,12 +629,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = snowday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -629,6 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowdayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/snowday.app/snowday";
 			};
 			name = Debug;
@@ -642,6 +663,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowdayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/snowday.app/snowday";
 			};
 			name = Release;
@@ -654,6 +676,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowdayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = snowday;
 			};
 			name = Debug;
@@ -666,6 +689,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbsnowday.snowdayUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = snowday;
 			};
 			name = Release;
