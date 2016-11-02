@@ -22,6 +22,7 @@
 		04C9DFEE1D669D6A00D0C46C /* PercentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFED1D669D6A00D0C46C /* PercentController.swift */; };
 		04C9DFF01D669D7300D0C46C /* ClosingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */; };
 		04C9DFF21D669D7F00D0C46C /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9DFF11D669D7F00D0C46C /* WeatherController.swift */; };
+		04DED2DB1DC906F7006C2099 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DED2DA1DC906F7006C2099 /* Resources.swift */; };
 		D8F3722CEA64522D7404A656 /* Pods_snowday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08A22E4CCF2C3FABD131504 /* Pods_snowday.framework */; };
 		E2275EDA2EA7772722F11FC4 /* Pods_snowdayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D7F25FAA3417C698BE29D3 /* Pods_snowdayTests.framework */; };
 		EEBBA1780ED312DE53BED789 /* Pods_snowdayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */; };
@@ -66,6 +67,7 @@
 		04C9DFED1D669D6A00D0C46C /* PercentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentController.swift; sourceTree = "<group>"; };
 		04C9DFEF1D669D7300D0C46C /* ClosingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosingsController.swift; sourceTree = "<group>"; };
 		04C9DFF11D669D7F00D0C46C /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
+		04DED2DA1DC906F7006C2099 /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		125EC462A67B074FF5480544 /* Pods-snowday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.debug.xcconfig"; sourceTree = "<group>"; };
 		1EACA24BCA03838D3FFEDCFD /* Pods-snowday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowday.release.xcconfig"; path = "Pods/Target Support Files/Pods-snowday/Pods-snowday.release.xcconfig"; sourceTree = "<group>"; };
 		3BFDB6F1FF78798B94A3A957 /* Pods_snowdayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowdayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		0499C0F21D660E34002F9914 /* snowday */ = {
 			isa = PBXGroup;
 			children = (
+				04DED2D91DC90693006C2099 /* resources */,
 				045C620C1DC8556100B14ACA /* model */,
 				045C620B1DC8553F00B14ACA /* controller */,
 				0499C0F31D660E34002F9914 /* AppDelegate.swift */,
@@ -180,6 +183,14 @@
 				0499C1171D660E34002F9914 /* Info.plist */,
 			);
 			path = snowdayUITests;
+			sourceTree = "<group>";
+		};
+		04DED2D91DC90693006C2099 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				04DED2DA1DC906F7006C2099 /* Resources.swift */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 		073A8B1B41F91597DEC2A667 /* Pods */ = {
@@ -478,6 +489,7 @@
 				0499C0F41D660E34002F9914 /* AppDelegate.swift in Sources */,
 				04C9DFF21D669D7F00D0C46C /* WeatherController.swift in Sources */,
 				04C9DFEC1D669D5C00D0C46C /* AboutController.swift in Sources */,
+				04DED2DB1DC906F7006C2099 /* Resources.swift in Sources */,
 				04C9DFEE1D669D6A00D0C46C /* PercentController.swift in Sources */,
 				0470E10E1D67AA4F0011B142 /* NavigationController.swift in Sources */,
 				04C9DFF01D669D7300D0C46C /* ClosingsController.swift in Sources */,
