@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044EA3E31DC9749500BC0A6D /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EA3E21DC9749500BC0A6D /* EventModel.swift */; };
 		0452A39B1DC8432D00BB3D6E /* Pods_snowdayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0452A39A1DC8432D00BB3D6E /* Pods_snowdayTests.framework */; };
 		0452A39D1DC8433500BB3D6E /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0452A39C1DC8433500BB3D6E /* SWXMLHash.framework */; };
 		0470E10E1D67AA4F0011B142 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470E10D1D67AA4F0011B142 /* NavigationController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044EA3E21DC9749500BC0A6D /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		0452A39A1DC8432D00BB3D6E /* Pods_snowdayTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_snowdayTests.framework; path = "../Library/Developer/Xcode/DerivedData/snowday-bmzgrcxlzwsjiwcdjqhkfrfxtafm/Build/Products/Debug-iphonesimulator/Pods_snowdayTests.framework"; sourceTree = "<group>"; };
 		0452A39C1DC8433500BB3D6E /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = "../Library/Developer/Xcode/DerivedData/snowday-bmzgrcxlzwsjiwcdjqhkfrfxtafm/Build/Products/Debug-iphonesimulator/SWXMLHash/SWXMLHash.framework"; sourceTree = "<group>"; };
 		0470E10D1D67AA4F0011B142 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		045C620C1DC8556100B14ACA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				044EA3E21DC9749500BC0A6D /* EventModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				04DED2DB1DC906F7006C2099 /* Resources.swift in Sources */,
 				04C9DFEE1D669D6A00D0C46C /* PercentController.swift in Sources */,
 				0470E10E1D67AA4F0011B142 /* NavigationController.swift in Sources */,
+				044EA3E31DC9749500BC0A6D /* EventModel.swift in Sources */,
 				04C9DFF01D669D7300D0C46C /* ClosingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
