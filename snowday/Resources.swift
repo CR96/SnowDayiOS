@@ -18,6 +18,7 @@ import Foundation
 import UIKit
 
 struct Colors {
+    static let colorPrimary = UIColor(red:0.01, green:0.47, blue:0.74, alpha:1.0)
     static let colorTint = UIColor(red:0.25, green:0.77, blue:1.00, alpha:1.0)
     static let colorPrimaryDark = UIColor(red:0.00, green:0.34, blue:0.61, alpha:1.0)
     static let colorBackground = UIColor(red:0.00, green:0.22, blue:0.40, alpha:1.0)

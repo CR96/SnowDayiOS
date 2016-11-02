@@ -18,12 +18,9 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    let colorPrimaryDark = UIColor(red:0.00, green:0.34, blue:0.61, alpha:1.0)
-    let colorTint = UIColor(red:0.25, green:0.77, blue:1.00, alpha:1.0)
-    
     override func viewDidLoad() {
-        tabBar.tintColor = colorTint
-        tabBar.barTintColor = colorPrimaryDark
+        tabBar.tintColor = Colors.colorTint
+        tabBar.barTintColor = Colors.colorPrimaryDark
     }
 }
 
