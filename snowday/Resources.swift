@@ -31,7 +31,7 @@ struct Colors {
 
 struct Strings {
     // Titles
-    static let appName = "Snow Day Calculator"
+    static let appName = "Grand Blanc Snow Day"
     static let appNameShort = "Snow Day"
     
     // About
